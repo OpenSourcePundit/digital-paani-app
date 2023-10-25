@@ -17,7 +17,7 @@ const RegistrationForm = () => {
     const errors = { name: "", number: "", bio: "", email: "", duplicate: "" };
     const regex =
       /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    const regexPhn = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/;
+    const regexPhn = /^\d{10}$/;
     if (!formValues.name) {
       errors.name = "We need your Name !!";
     }
