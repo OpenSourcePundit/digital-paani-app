@@ -3,7 +3,7 @@ import {useData} from '../../context'
 
 
 export const RegisteredUsersList = () =>{
-    const {data,isOpenUserDetailsModal,setIsOpenUserDetailsModal} = useData();
+    const {data,setIsOpenUserDetailsModal} = useData();
 
     return(
         <div className="list-main-container">
@@ -14,7 +14,7 @@ export const RegisteredUsersList = () =>{
                 <ul className="registered-users-list">
                     {
                         data?.map((user)=>{return(
-                            <div className="single-user-card" onClick={()=>setIsOpenUserDetailsModal(true)}>
+                            <div className="single-user-card" onClick={()=>setIsOpenUserDetailsModal({userNumber:user.number,state:true})}>
                                 {user.name}
                             </div>
                         )})

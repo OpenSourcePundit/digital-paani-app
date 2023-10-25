@@ -62,12 +62,13 @@ const RegistrationForm = () => {
         "regUsers",
         JSON.stringify({ participants: [...data, formValues] })
       );
+      setIsRegistrationForm(false)
       setFormValues({ name: "", number: "", bio: "", email: "" });
     }
   }, [errors]);
 
   return (
-    <div className="registration-form-bg">
+    <div className="registration-form-bg" onClick={()=>setIsRegistrationForm(false)}>
       <div className="registration-form" onClick={(e)=>e.stopPropagation()}>
         <div className="right-align-close">
           <div className="close-btn" onClick={()=>setIsRegistrationForm(false)}>X</div>
