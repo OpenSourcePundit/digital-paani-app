@@ -1,0 +1,141 @@
+
+.screen-reader-only{
+    position: absolute;
+    width: 1px;
+    height: 1px; 
+    padding: 0;
+    margin: -1px;   
+    overflow: hidden;   
+
+}
+.right-align{
+    text-align: right;
+    margin-top: 40px;
+}
+.input{
+    height: 3rem;
+}
+.input-container{
+    padding: 0;
+    width: 100%;
+    border-radius: 0;
+    border: none;
+    
+    
+    color: brown;
+}
+input{
+    height: 30px;
+    size: 100%;
+
+}
+input:focus{
+    outline: none;
+    box-shadow: none;
+}
+.registration-form-bg{
+    position: fixed;
+    background: rgb(0,0,0,0.8);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.registration-form{
+    background-color: rgba(212, 250, 205, 0.829);    
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    min-width: 150px;
+    max-width: 350px;
+    align-self: c;
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 5px black;
+    align-items: center;
+    justify-content: center;
+}
+#reg-form{
+    max-width: 350px;
+    width: 90%;
+}
+.input{
+    padding: 2px;
+    margin: 1.5rem 0;
+    width: 100%;
+
+}
+.error-message{
+    color: red;
+    font-size: small;
+    margin-block-start: 0%;
+    margin-block-end: 0%;
+    word-wrap: break-word;
+}
+
+
+.input-container.outline{
+    /* linear gradients to background image for animatioon*/ 
+    background-image: linear-gradient(to right,var(--bgcolor),var(--bgcolor)),
+    linear-gradient(to bottom,var(--bgcolor),var(--bgcolor)),
+    linear-gradient(to right,var(--bgcolor),var(--bgcolor)),
+    linear-gradient(to bottom,var(--bgcolor),var(--bgcolor)) ;
+    background-position: 0 0 , 100% 0 , 100% 100% , 0 100% ;
+    background-size: 100% 5px , 5px 100% , 100% 5px , 5px 100%;
+    background-repeat: no-repeat;
+    animation-name: animation-input-form ;
+    animation-duration: 1s;
+    padding: 7px 2px;
+    max-width: 180px;
+
+}
+
+
+@keyframes animation-input-form {
+    0%{
+        background-size: 0 5px, 0 0 , 0 0 , 0 0 ;
+    }
+    25%{
+        background-size: 100% 5px, 0 0 , 0 0 , 0 0 ;
+    }
+    50%{
+        background-size: 100% 5px, 5px 100% , 0 0 , 0 0 ;
+    }
+    75%{
+        background-size: 100% 5px, 5px 100% , 100% 5px , 0 0 ;
+    }
+    100%{
+        background-size: 100% 5px, 5px 100% , 100% 5px , 5px 100% ;
+    }
+}
+.right-align button{
+    background-color: black;
+    color: aliceblue;
+    font-weight: 500;
+    font-size: medium;
+    width: 100px;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+.right-align-close{
+    text-align: right;
+}
+.right-align-close .close-btn{
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    height: 20px;
+    width: 15px;
+    text-align: center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
