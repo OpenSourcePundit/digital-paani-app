@@ -18,6 +18,10 @@ const UserDetailsModal = ({userNumber}) =>{
                    <p>E-mail: {foundUser?.email}</p>
                    <p>Phone Number: {foundUser?.number}</p>
                    <p>Bio: {foundUser?.bio}</p>
+                   <p>Registered on: {new Intl.DateTimeFormat("en-GB", {
+                    dateStyle: "long",
+                    timeStyle: "short",
+                  }).format(Date.parse(foundUser?.registerDate))}</p>
 
                 </div>
             </div>

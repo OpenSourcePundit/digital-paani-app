@@ -22,7 +22,11 @@ const EventCard = () =>{
                 {eventObject.eventDescription}
             </p>
             <p className="event-date">
-                Date and Time: {eventObject.eventDate.toString()}
+                Date and Time:{new Intl.DateTimeFormat("en-GB", {
+                    dateStyle: "long",
+                    timeStyle: "short",
+                  }).format(Date.parse(eventObject.eventDate))}
+                 {/* {eventObject.eventDate.getMonth()+1} */}
             </p>
             <p className="event-speakers">
                 Speakers: {eventObject.speakers.map((speaker)=>{

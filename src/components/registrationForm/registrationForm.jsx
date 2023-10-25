@@ -57,12 +57,13 @@ const RegistrationForm = () => {
       errors?.duplicate === "" &&
       isSubmit
     ) {
-      setData([...data, formValues]);
+      setData([...data, {...formValues,registerDate:new Date()}]);
       localStorage.setItem(
         "regUsers",
-        JSON.stringify({ participants: [...data, formValues] })
+        JSON.stringify({ participants: [...data, {...formValues,registerDate:new Date()}] })
       );
       setIsRegistrationForm(false)
+      console.log(data)
       setFormValues({ name: "", number: "", bio: "", email: "" });
     }
   }, [errors]);
