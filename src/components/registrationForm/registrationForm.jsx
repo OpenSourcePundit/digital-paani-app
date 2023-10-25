@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useData } from "../../context";
-import './registrationForm.css';
 const RegistrationForm = () => {
   const xyz = "outline";
   const { data, setData,setIsRegistrationForm } = useData();
