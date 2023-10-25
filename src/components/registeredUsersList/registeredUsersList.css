@@ -1,0 +1,21 @@
+
+.list-main-container{
+float: right;
+width: 50rem;
+text-align: left;
+}
+
+.registered-users-list{
+
+}
+.single-user-card{
+    padding: 2px;
+    margin: 5px;
+    padding-left: 0;
+    margin-left:0 ;
+}
+.single-user-card:hover{
+    transform: scale(1.2);
+    transition: .3s;
+    cursor: pointer;
+}

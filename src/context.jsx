@@ -6,7 +6,7 @@ const DataProvider = ({children}) =>{
     
     const [data,setData] = useState([]);
     const [isOpenUserDetailsModal,setIsOpenUserDetailsModal] = useState({userNumber:'',state:false})
-    const [isRegistrationForm,setIsRegistrationForm] = useState(true)
+    const [isRegistrationForm,setIsRegistrationForm] = useState(false)
     useEffect(()=>{
         let regUsers = JSON?.parse(localStorage?.getItem('regUsers'))
         console.log("reguser:",regUsers)

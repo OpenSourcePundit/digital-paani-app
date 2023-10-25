@@ -1,4 +1,5 @@
 import React from 'react';
+import './registeredUsersList.css'
 import {useData} from '../../context'
 
 
