@@ -25,7 +25,9 @@ const EventCard = () =>{
                 Date and Time: {eventObject.eventDate.toString()}
             </p>
             <p className="event-speakers">
-                Speakers: {eventObject.speakers.map((speaker)=><>{speaker.speakerName}</>)}
+                Speakers: {eventObject.speakers.map((speaker)=>{
+                    return(<p key={speaker.number}>{speaker.speakerName}</p>)
+                })}
             </p>
 
             <div className="bottom-right">
